@@ -10,11 +10,14 @@ M703
 M118 S"Set bed temp for first layer"
 M140 S{first_layer_bed_temperature} ; Set bed temp
 
-M118 S"Wait for bed temp for first layer"
+M118 S"Wait for 90% bed temp for first layer"
 M190 S{first_layer_bed_temperature * 0.9} ; Wait for Heat Bed temperature
 
 M118 S"Set extruder temp for first layer"
 M104 S{first_layer_temperature}     ; set extruder temp
+
+M118 S"Wait for full bed temp for first layer"
+M190 S{first_layer_bed_temperature} ; Wait for Heat Bed temperature
 
 M118 S"Wait for extruder temp for first layer"
 M109 S{first_layer_temperature}     ; Wait for extruder temperature
