@@ -1,3 +1,12 @@
+M118 S"Unload current filament"
+M702
+
+M118 S"Set filament type to {filament_type}"
+M701 S"{filament_type}"
+
+M118 S"Loading filament config for {filament_type}"
+M703
+
 M118 S"Set bed temp for first layer"
 M140 S{first_layer_bed_temperature} ; Set bed temp
 
